@@ -44,12 +44,19 @@
     <header></header>
     <main>
       <!--starts hero section  -->
-      <section>
+      <section class="mt-20">
         <label
-          class="w-1/3 mt-10 input input-bordered flex items-center pr-1 p-1"
+          class="w-fit gap-10 input input-bordered flex items-center pl-4 pr-1 p-1"
         >
-          <input type="text" class="grow" placeholder="Search" />
-          <span class="btn px-6 rounded-full min-h-fit h-full badge badge-info"
+          <input
+            id="search-input"
+            type="text"
+            class="grow"
+            placeholder="Search"
+          />
+          <span
+            onclick="clickSearch()"
+            class="btn px-6 rounded-full min-h-fit h-full bade bg-btnColor text-white font-bold text-[18px]"
             >Search</span
           >
         </label>
@@ -74,63 +81,11 @@
 
           <!--? all post container [ js innerHTML here ] -->
           <div id="all-post-container" class="col-span-2">
-            <div
-              class="mb-6 h-fit col-span-2 flex gap-6 p-10 rounded-2xl bg-[#F3F3F5]"
-            >
-              <div class="rounded-2xl relative">
-                <img class="rounded-2xl w-16 bg-white h-16" src="" alt="" />
-                <div
-                  class="w-3 h-3 bg-btnActive rounded-full absolute top-0 right-0 transform translate-x-[25%] -translate-y-[25%]"
-                ></div>
-              </div>
-              <!--  -->
-              <div class="">
-                <div
-                  class="text-primary80 font-Inter font-[500] text-sm flex gap-5"
-                >
-                  <p># Music</p>
-                  <p>Author : Awlad Hossain</p>
-                </div>
-                <h3 class="font-bold text-primary text-xl mt-3 mb-4">
-                  10 Kids Unaware of Their Halloween Costume
-                </h3>
-                <p class="text-primary60 w-[90%] font-Inter">
-                  It’s one thing to subject yourself to ha Halloween costume
-                  mishap because, hey that’s your prerogative
-                </p>
-                <div
-                  class="border-t border-dashed border-[#12132D40] mt-5 mb-6"
-                ></div>
-                <!--  -->
-                <div class="flex justify-between">
-                  <div class="font-Inter flex items-center gap-6">
-                    <div
-                      class="flex items-center font-Inter text-primary60 gap-3"
-                    >
-                      <i class="fa-solid fa-message"></i>
-                      <p>560</p>
-                    </div>
-                    <div
-                      class="flex items-center font-Inter text-primary60 gap-3"
-                    >
-                      <i class="fa-regular fa-eye"></i>
-                      <p>1,560</p>
-                    </div>
-                    <div
-                      class="flex items-center font-Inter text-primary60 gap-3"
-                    >
-                      <i class="fa-regular fa-clock"></i>
-                      <p>5 min</p>
-                    </div>
-                  </div>
-                  <div
-                    class="w-10 h-10 flex items-center justify-center rounded-full btn text-white bg-btnActive hover:bg-btnActive min-h-fit"
-                  >
-                    <i class="text-lg fa-solid fa-envelope"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <!-- 
+            
+            innerHTL content here
+            
+            -->
           </div>
           <!-- 
           
@@ -144,25 +99,21 @@
                 <i
                   class="opacity-60 text-btnActive fa-solid fa-check-double"
                 ></i>
-                <p class="font-Inter text-primary60">Mark as read (4)</p>
+                <p class="font-Inter text-primary60">
+                  Mark as read <span id="selected-count">(0)</span>
+                </p>
               </div>
             </div>
             <!-- 
             
             -->
             <!--? js modification card container [ js innerHTML] -->
-            <div id="title-container">
-              <div
-                class="mb-4 text-sm flex justify-between gap-2 bg-white p-4 rounded-[16px]"
-              >
-                <h1 class="text-primary font-semibold">
-                  10 Kids Unaware of Their Halloween Costume
-                </h1>
-                <div class="flex items-center font-Inter text-primary60 gap-2">
-                  <i class="fa-regular fa-eye"></i>
-                  <p>1,560</p>
-                </div>
-              </div>
+            <div id="read-container" class="">
+              <!-- 
+              
+              innerHTML 
+              
+              -->
             </div>
             <!--  -->
           </div>
@@ -176,7 +127,7 @@
       <!--  -->
       <!-- * latest posts starts  -->
 
-      <section>
+      <section class="mb-24">
         <!-- title  -->
         <div class="mt-20 mb-10">
           <h1 class="text-primary text-[2.5rem] font-[900] text-center mb-5">
@@ -230,5 +181,6 @@
     </main>
     <!--  -->
     <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
