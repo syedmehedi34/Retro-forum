@@ -34,13 +34,9 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-    <!-- font adjust  -->
     <!-- 
-    font-family: "Inter", sans-serif; 
-    font-family: "Mulish", sans-serif; 
-    -->
-
-    <!--  <body class="font-lexend"> -->
+    
+-->
   </head>
   <!-- 
    -->
@@ -75,44 +71,63 @@
         <!-- * cards starts  -->
         <section class="grid grid-cols-3 gap-6 justify-center">
           <!-- sec left div starts [ post container ] -->
-          <div class="border-2 col-span-2 flex gap-6 p-10 rounded-2xl">
-            <div class="rounded-2xl relative">
-              <img class="rounded-2xl w-16 bg-white h-16" src="" alt="" />
-              <div
-                class="w-3 h-3 bg-btnActive rounded-full absolute top-0 right-0 transform translate-x-[25%] -translate-y-[25%]"
-              ></div>
-            </div>
-            <!--  -->
-            <div class="">
-              <div
-                class="text-primary80 font-Inter font-[500] text-sm flex gap-5"
-              >
-                <p># Music</p>
-                <p>Author : Awlad Hossain</p>
+
+          <!--? all post container [ js innerHTML here ] -->
+          <div id="all-post-container" class="col-span-2">
+            <div
+              class="mb-6 h-fit col-span-2 flex gap-6 p-10 rounded-2xl bg-[#F3F3F5]"
+            >
+              <div class="rounded-2xl relative">
+                <img class="rounded-2xl w-16 bg-white h-16" src="" alt="" />
+                <div
+                  class="w-3 h-3 bg-btnActive rounded-full absolute top-0 right-0 transform translate-x-[25%] -translate-y-[25%]"
+                ></div>
               </div>
-              <h3 class="font-bold text-primary text-xl mt-3 mb-4">
-                10 Kids Unaware of Their Halloween Costume
-              </h3>
-              <p class="text-primary60 w-[90%] font-Inter">
-                It’s one thing to subject yourself to ha Halloween costume
-                mishap because, hey that’s your prerogative
-              </p>
-              <div
-                class="border-t border-dashed border-[#12132D40] mt-5 mb-6"
-              ></div>
               <!--  -->
-              <div class="font-Inter flex items-center gap-6">
-                <div class="flex items-center font-Inter text-primary60 gap-3">
-                  <i class="fa-solid fa-message"></i>
-                  <p>560</p>
+              <div class="">
+                <div
+                  class="text-primary80 font-Inter font-[500] text-sm flex gap-5"
+                >
+                  <p># Music</p>
+                  <p>Author : Awlad Hossain</p>
                 </div>
-                <div class="flex items-center font-Inter text-primary60 gap-3">
-                  <i class="fa-regular fa-eye"></i>
-                  <p>1,560</p>
-                </div>
-                <div class="flex items-center font-Inter text-primary60 gap-3">
-                  <i class="fa-regular fa-clock"></i>
-                  <p>5 min</p>
+                <h3 class="font-bold text-primary text-xl mt-3 mb-4">
+                  10 Kids Unaware of Their Halloween Costume
+                </h3>
+                <p class="text-primary60 w-[90%] font-Inter">
+                  It’s one thing to subject yourself to ha Halloween costume
+                  mishap because, hey that’s your prerogative
+                </p>
+                <div
+                  class="border-t border-dashed border-[#12132D40] mt-5 mb-6"
+                ></div>
+                <!--  -->
+                <div class="flex justify-between">
+                  <div class="font-Inter flex items-center gap-6">
+                    <div
+                      class="flex items-center font-Inter text-primary60 gap-3"
+                    >
+                      <i class="fa-solid fa-message"></i>
+                      <p>560</p>
+                    </div>
+                    <div
+                      class="flex items-center font-Inter text-primary60 gap-3"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                      <p>1,560</p>
+                    </div>
+                    <div
+                      class="flex items-center font-Inter text-primary60 gap-3"
+                    >
+                      <i class="fa-regular fa-clock"></i>
+                      <p>5 min</p>
+                    </div>
+                  </div>
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full btn text-white bg-btnActive hover:bg-btnActive min-h-fit"
+                  >
+                    <i class="text-lg fa-solid fa-envelope"></i>
+                  </div>
                 </div>
               </div>
             </div>
@@ -121,9 +136,8 @@
           
           -->
           <!-- sec right div starts  [title container]   -->
-          <div
-            class="p-6 rounded-[24px] bg-[#12132D0D] border-2 border-green-700"
-          >
+          <div class="p-6 h-fit rounded-[24px] bg-[#12132D0D]">
+            <!-- title  -->
             <div class="mb-5 flex justify-between items-center">
               <h2 class="text-primary font-bold text-xl">Title</h2>
               <div class="flex items-center justify-center gap-2">
@@ -133,17 +147,88 @@
                 <p class="font-Inter text-primary60">Mark as read (4)</p>
               </div>
             </div>
-            <!-- js modification card  -->
-            <div></div>
+            <!-- 
+            
+            -->
+            <!--? js modification card container [ js innerHTML] -->
+            <div id="title-container">
+              <div
+                class="mb-4 text-sm flex justify-between gap-2 bg-white p-4 rounded-[16px]"
+              >
+                <h1 class="text-primary font-semibold">
+                  10 Kids Unaware of Their Halloween Costume
+                </h1>
+                <div class="flex items-center font-Inter text-primary60 gap-2">
+                  <i class="fa-regular fa-eye"></i>
+                  <p>1,560</p>
+                </div>
+              </div>
+            </div>
             <!--  -->
           </div>
         </section>
         <!-- * cards ends  -->
       </section>
       <!-- lets discuss section ends  -->
+
+      <!-- 
+      -->
+      <!--  -->
+      <!-- * latest posts starts  -->
+
+      <section>
+        <!-- title  -->
+        <div class="mt-20 mb-10">
+          <h1 class="text-primary text-[2.5rem] font-[900] text-center mb-5">
+            Latest Posts
+          </h1>
+          <p
+            class="font-Inter mb-10 text-primary60 text-center w-3/4 md:w-1/2 mx-auto"
+          >
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined .
+          </p>
+        </div>
+
+        <!-- ? latest post js portion -->
+        <section class="grid grid-cols-3 gap-6">
+          <div class="card border border-[#12132D26] shadow-md p-6">
+            <figure class="">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt=""
+                class="rounded-xl object-cover"
+              />
+            </figure>
+            <div class="">
+              <div class="flex gap-3 text-primary60 items-center mt-6 mb-4">
+                <i class="fa-regular fa-calendar-minus"></i>
+                <p>29 January 2024</p>
+              </div>
+              <h2 class="text-primary text-[18px] font-extrabold">
+                What will a mars habitat force that impact in our daily life!!!
+              </h2>
+              <p class="text-primary60 mt-3 mb-4">
+                Yes, you can run unit tests and view the results directly within
+                the app.
+              </p>
+              <div class="flex gap-4 items-center">
+                <div class="w-10 h-10 bg-slate-200 rounded-full">
+                  <img class="rounded-full object-cover" src="" alt="" />
+                </div>
+                <div class="space-y-[5px]">
+                  <h3 class="text-primary font-bold">Cameron Williamson</h3>
+                  <p class="text-primary60 text-sm">Unknown</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- * latest posts ends    -->
     </main>
     <!--  -->
     <script src="js/script.js"></script>
-    <script src="tailwind.config.js"></script>
   </body>
 </html>
