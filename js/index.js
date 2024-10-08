@@ -54,7 +54,7 @@ const cardsFunction = (posts) => {
   ></div>
 </div>
 <!--  -->
-<div class="">
+<div class="w-full">
   <div
     class="text-primary80 font-Inter font-[500] text-sm flex gap-5"
   >
@@ -72,7 +72,7 @@ const cardsFunction = (posts) => {
  ></div>
  <!--  -->
  <div class="flex justify-between w-full">
-   <div class="font-Inter flex items-center gap-6">
+   <div class="font-Inter flex items-center gap-6 ">
      <div
        class="flex items-center font-Inter text-primary60 gap-3"
      >
@@ -148,9 +148,71 @@ const selectedCountFunction = () => {
   selectedCount.innerText = `(${selectedCards.length})`;
 };
 
+//*/////////////////////////////////////////////
+
+const latestPostLoad = async () => {
+  const res = await fetch(
+    `https://openapi.programming-hero.com/api/retro-forum/latest-posts`
+  );
+  const post = await res.json();
+  //   console.log(post);
+  latestPostAppend(post);
+};
+
+//
+//
+const latestPostAppend = (posts) => {
+  const latestPostContainer = document.getElementById("latest-post");
+  posts.forEach((post) => {
+    // console.log(post);
+    const div = document.createElement("div");
+    div.classList = "card border border-[#12132D26] shadow-md p-6";
+    div.innerHTML = `
+    
+  <figure class="">
+    <img
+      src="${post.cover_image}"
+      alt=""
+      class="rounded-xl object-cover"
+    />
+  </figure>
+  <div class="">
+    <div class="flex gap-3 text-primary60 items-center mt-6 mb-4">
+      <i class="fa-regular fa-calendar-minus"></i>
+      <p>${
+        post.author.posted_date ? post.author.posted_date : "Not available"
+      }</p>
+    </div>
+    <h2 class="text-primary text-[18px] font-extrabold">
+      ${post.title}
+    </h2>
+    <p class="text-primary60 mt-3 mb-4">
+      ${post.description}
+    </p>
+    <div class="flex gap-4 items-center">
+      <div class="w-10 h-10 rounded-full">
+        <img class="rounded-full object-cover" src="${
+          post.profile_image
+        }" alt="" />
+      </div>
+      <div class="space-y-[5px]">
+        <h3 class="text-primary font-bold">${post.author.name}</h3>
+        <p class="text-primary60 text-sm">${
+          post.author.designation ? post.author.designation : "Not mentioned"
+        }</p>
+      </div>
+    </div>
+  </div>
+         
+  
+    `;
+    latestPostContainer.appendChild(div);
+  });
+};
 //
 //
 //
 // run the functions
 fetchData();
 selectedCountFunction();
+latestPostLoad();
